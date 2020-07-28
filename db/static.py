@@ -4,14 +4,12 @@
     'PLANT_NAME':[
         {
             'name':'DISEASE_NAME',
-            'name_ar':'DISEASE_NAME_AR',
             'details':'DISEASE_DETAILS',
             'link':'DISEASE_LINK',
             'symptoms':[
                 {
                     'name':'SYMPTOM_NAME',
-                    'CF':'CF_VALUE',
-                    'question':'SYMPTOM_QUESTION'
+                    'CF':'CF_VALUE'
                 }
             ]
         }
@@ -20,7 +18,7 @@
 '''
 
 
-''' static data '''
+''' static data used in case there is any error'''
 Disease_Data = {
     'p1': [
         {
@@ -58,7 +56,19 @@ Disease_Data = {
                 {'name': 's4', 'CF': 0.1}
             ]
         }
+    ],
+    'الملفوف(Cabbage)': [
+        {
+            'name': 'نقص النيتروجين Nitrogen Deficiency in cabbage',
+            'link': 'https://www.al-hakem.com/نقص-النيتروجين-على-الملفوف-و-القرنبيط/',
+            'symptoms': [
+                {'name': 'أوراق أصغر من الأوراق الطبيعية',   'CF': 0.3},
+                {'name': 'أوراق لونها أخضر باهت مصفر',      'CF': 0.9},
+                {'name': 'الساق تكون رقيقة وصلبة',          'CF': 0.5},
+                {'name': 'النمو ببطء',                       'CF': 0.2},
+            ]
+        }
     ]
 }
 
-plants_Array = ['p1', 'p2']
+plants_Array = ['الملفوف(Cabbage)', 'p2']
