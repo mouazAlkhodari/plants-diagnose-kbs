@@ -34,13 +34,13 @@ class Diagnose_Disease_Engine(KnowledgeEngine):
         UserInput_Symptoms_CF = unfreeze(userInputSymptoms) or {}
 
         # # processing
-        total_CF = 1 - reduce(
+        total_CF = reduce(
             lambda resultCF, symptom: calcCF(
                 resultCF,
-                Calc_Symptom_CF_With_UserInput(symptom, UserInput_Symptoms_CF)
+                Symptom_CF_With_UserInput(symptom, UserInput_Symptoms_CF)
             ),
             Disease_Symptoms,
-            1
+            0
         )
         # print('result', result_UserInput_Symptoms_CF)
 
@@ -48,13 +48,15 @@ class Diagnose_Disease_Engine(KnowledgeEngine):
         self.modify(disease, CF=total_CF, state=DiseaseStates.DIAGNOSED)
 
 
-def Calc_Symptom_CF_With_UserInput(symptom: dict, userInputSymptomsCF: dict):
+def Symptom_CF_With_UserInput(symptom: dict, userInputSymptomsCF: dict):
     symptomName = symptom['name']
     symptomCF = symptom['CF']
     return symptomCF * userInputSymptomsCF[symptomName]
 
 
 def calcCF(cf1, cf2):
-    # print(cf1 * (1 - cf2))
-    return cf1 * (1 - cf2)
-    # TODO: check if it worked
+    if cf1 >= 0 and cf2 >= 0:
+        return cf1 + cf2 * (1 - cf1)
+    if cf1 < 0 and cf2 < 0:
+        return cf1 + cf2 * (1 + cf1)
+    return (cf1 + cf2) / (1 - min(abs(cf1), abs(cf2)))

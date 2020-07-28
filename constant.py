@@ -29,3 +29,9 @@ class DiseaseStates:
         'SY_CF_INPUTTED',
         'DIAGNOSED'
     ]
+
+
+TITLE = 'Plant Diagnose - تشخيص أمراض المزروعات'
+WELCOME = 'أهلا بك في برنامج خبير تشخيص أمراض المزروعات' 
+START = 'إبدا'
+BACKGROUND = 'assets/background.png'

@@ -2,7 +2,7 @@ from experta import *
 from functools import reduce, singledispatch
 
 from custom_facts import *
-from db.static import *
+from db import *
 
 
 class Define_Plant_Diseases_Engine(KnowledgeEngine):

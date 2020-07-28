@@ -1,5 +1,5 @@
 from constant import *
-from db.static import *
+from db import *
 ''' asking helper functions '''
 
 
@@ -7,6 +7,7 @@ def Ask_Choices_Question(question: str, *choices) -> str:
     '''
         function that ask question with list of choices to allow the user to choose from
     '''
+    # // TODO make it in gui
     while True:
         try:
             answer = input('{}\nchoices:\n{}\nanswer:'.format(
