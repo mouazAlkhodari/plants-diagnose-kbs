@@ -98,26 +98,10 @@ Disease_Data = {
          "link": "https://www.al-hakem.com/نقص-النيتروجين-على-الملفوف-و-القرنبيط/",
          "details": "",
          "symptoms": [
-            {
-               "name": "smaller leaves",
-               "nameAr": "أوراق أصغر من الأوراق الطبيعية",
-               "CF": 0.23772814175221568
-            },
-            {
-               "name": "yellowish-green leaves",
-               "nameAr": "أوراق لونها أخضر باهت مصفر",
-               "CF": 0.47616129033123433
-            },
-            {
-               "name": "The leg is thin and solid",
-               "nameAr": "الساق تكون رقيقة وصلبة",
-               "CF": 0.7862640627314094
-            },
-            {
-               "name": "slow growth",
-               "nameAr": "النمو ببطء",
-               "CF": 0.8259993973867956
-            }
+            {"name": "smaller leaves","nameAr": "أوراق أصغر من الأوراق الطبيعية","CF": 0.5},
+            {"name": "yellowish-green leaves","nameAr": "أوراق لونها أخضر باهت مصفر","CF": 0.2},
+            {"name": "The leg is thin and solid","nameAr": "الساق تكون رقيقة وصلبة","CF": 0.6},
+            {"name": "slow growth","nameAr": "النمو ببطء","CF": 0.4}
          ]
       },
       {

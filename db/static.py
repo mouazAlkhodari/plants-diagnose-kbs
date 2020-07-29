@@ -18,7 +18,7 @@
 '''
 
 
-''' static data used in case there is any error'''
+''' static data used in case there is any error '''
 Disease_Data = {
     'p1': [
         {

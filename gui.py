@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 from constant import *
-import math
+from math import *
+from random import *
 
 width = 800
 height = 600
@@ -23,6 +24,10 @@ def GUIButton(text):
     return sg.Button(text, size=(100, 2), font=("Helvetica", 14))
 
 
+def GUIChoice(text):
+    return sg.Button(text, size=(100, 1), font=("Helvetica", 12))
+
+
 def showStartWindow():
     sg.theme('LightGreen')
 
@@ -33,5 +38,32 @@ def showStartWindow():
         **DefaultWindowProps,
     ).read(close=True)
 
-    print(result)
     return result != None
+
+
+def showAskAboutSymtomWindow(question, choices):
+    sg.theme('LightGreen')
+
+    layout = [
+        [GUItitle(question)],
+        [
+            sg.Frame(
+                title="الخيارات - options",
+                layout=[[GUIChoice(choice)]for choice in choices])
+        ]
+    ]
+
+    window = sg.Window(
+        layout=layout,
+        **DefaultWindowProps,
+    )
+
+    event, values = window.read(close=False)
+
+    window.close()
+
+    if(event not in choices):
+        event = choice(choices)
+
+    # print('You entered ', event, values)
+    return event

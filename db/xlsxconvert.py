@@ -31,7 +31,7 @@ def ReadAndConvert():
 
 
     # save data 
-    file = codecs.open('db/data.py', 'wb', 'utf-8')
+    file = codecs.open('db/disease_data.py', 'wb', 'utf-8')
     JSON_Disease_Data = json.dumps(Disease_Data, ensure_ascii=False, indent=3)
     file.write('Disease_Data = ')
     file.write(JSON_Disease_Data)

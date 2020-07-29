@@ -9,9 +9,9 @@ from engines import *
 from gui import *
 
 try:
-    import db.data
+    import db.disease_data
 except:
-    ReadDiseaseData()
+    ReadAndConvert()
 
 
 class Plants_Disease_Diagnose_Engine(

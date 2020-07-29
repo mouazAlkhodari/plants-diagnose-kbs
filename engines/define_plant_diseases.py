@@ -37,12 +37,12 @@ def Accumulate_Symptoms_CF(resultSymptoms: dict, symptom: dict):
 def Build_Disease_Fact(**disease: Disease) -> Disease:
     return Disease(
         **{
+            'state': DiseaseStates.INITIAL,
             **disease,
             'symptoms': reduce(
                 Accumulate_Symptoms_CF,
                 disease['symptoms'],
                 {}
             ),
-            'state': disease['state'] if 'state' in disease else DiseaseStates.INITIAL,
         }
     )
