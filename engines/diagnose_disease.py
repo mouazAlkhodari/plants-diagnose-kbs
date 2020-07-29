@@ -4,6 +4,7 @@ from experta.utils import *
 
 from custom_facts import *
 from ask_questions import *
+import codecs
 
 
 class Diagnose_Disease_Engine(KnowledgeEngine):
@@ -27,7 +28,6 @@ class Diagnose_Disease_Engine(KnowledgeEngine):
             disease: Disease,
             userInputSymptoms: dict,
     ):
-        # pass
         # # initialize
         # print('read', disease, repr(disease))
         Disease_Symptoms = diseaseSymptoms.values()
@@ -46,6 +46,30 @@ class Diagnose_Disease_Engine(KnowledgeEngine):
 
         # updating
         self.modify(disease, CF=total_CF, state=DiseaseStates.DIAGNOSED)
+
+    @Rule(NOT(Fact('done')), salience=-1)
+    def get_results(self):
+        results = []
+        for factId in list(self.facts):
+            if type(self.facts[factId]) is Disease:
+                results.append((
+                    factId,
+                    self.facts[factId]['name'],
+                    self.facts[factId]['CF']
+                ))
+
+        # Sorting the result Descending
+        results = sorted(results, key=lambda x: x[2], reverse=True)
+
+        file = codecs.open('samples/result.txt', 'w', 'utf-8')
+        file.write(
+            json.dumps(
+                unfreeze(self.facts[results[0][0]]), indent=3, ensure_ascii=False
+            ) + '\n\n'
+        )
+        file.write(json.dumps(results, indent=3, ensure_ascii=False))
+        print(results)
+        self.declare(Fact('done'))
 
 
 def Symptom_CF_With_UserInput(symptom: dict, userInputSymptomsCF: dict):

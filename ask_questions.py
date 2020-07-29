@@ -1,9 +1,12 @@
 from constant import *
 from db import *
 from gui import *
+import codecs
 
+randomChoice = True
 
 ''' asking helper functions '''
+file = codecs.open('samples/test.txt', 'w', 'utf-8')
 
 
 def Ask_Choices_Question(question: str, *choices) -> str:
@@ -28,10 +31,22 @@ def Ask_Choices_Question(question: str, *choices) -> str:
 
 
 def Ask_Plant_Name() -> str:
-    return Ask_Choices_Question('what is the plant to be diagnosed ?', *plants_Array)
+    result = Ask_Choices_Question(
+        'what is the plant to be diagnosed ?', *plants_Array)
+    file.write(result + '\n')
+    return result
 
 
-def Ask_About_Symptom(question: str) -> float:
-    result = Ask_Choices_Question(question, *CF_STRINGS.keys())
-    # result = choice(list(CF_STRINGS.keys()))
+def Ask_About_Symptom(question: str, symptom_Name, symptom_NameAr) -> float:
+    if randomChoice:
+        result = choice(list(CF_STRINGS.keys()))
+        # result = 'مطلقاً'
+        # result = 'لا'
+        # result = 'لست متأكدا'
+        # result = 'نعم ربما'
+        # result = 'نعم بالتاكيد'
+    else:
+        result = Ask_Choices_Question(question, *CF_STRINGS.keys())
+    file.write(symptom_NameAr + '\n')
+    file.write(result + '\n')
     return CF_STRINGS[result]

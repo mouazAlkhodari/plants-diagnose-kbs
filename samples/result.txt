@@ -1,0 +1,77 @@
+{
+   "state": "DIAGNOSED",
+   "plant": "ملفوف - Cabbage",
+   "name": "نقص المغنيسيوم \n(Magnesium (Mg\n",
+   "link": "https://www.al-hakem.com/نقص-المغنيسيوم-على-الملفوف-و-القرنبيط/",
+   "details": "يحدث نقص المغنيسيوم أساسًا في التربة الحمضية ، وفي التربة الخفيفة جدًا التي تخضع للغسيل أو في التربة ذات مستوى البوتاسيوم المرتفع جدًا.",
+   "symptoms": {
+      "The leaves are stained violet red": {
+         "question": "what about The leaves are stained violet red?",
+         "name": "The leaves are stained violet red",
+         "nameAr": "تلون الأوراق باللون الأحمر البنفسجي",
+         "CF": 0.15601163460921186
+      },
+      "Chlorosis in the leaves": {
+         "question": "what about Chlorosis in the leaves?",
+         "name": "Chlorosis in the leaves",
+         "nameAr": "تبرقش على الأوراق",
+         "CF": 0.44555818384733037
+      },
+      "leaves fall": {
+         "question": "what about leaves fall?",
+         "name": "leaves fall",
+         "nameAr": "تساقط الاوراق",
+         "CF": 0.7077336690573596
+      }
+   },
+   "CF": 0.6700437924984327,
+   "__factid__": 20
+}
+
+[
+   [
+      20,
+      "نقص المغنيسيوم \n(Magnesium (Mg\n",
+      0.6700437924984327
+   ],
+   [
+      14,
+      "نقص الكاسيوم (Calcium (Ca\n",
+      0.637579595367232
+   ],
+   [
+      35,
+      "موزاييك الفجل \nRadish Mosaic\n",
+      0.2040904530891651
+   ],
+   [
+      38,
+      "نيماتودا تعقد الجذور\nRoot Knot\n",
+      0.007401271425929532
+   ],
+   [
+      29,
+      "نقص االفوسفور \n(Phosphorus (P\n",
+      -0.07018885014434235
+   ],
+   [
+      32,
+      "نقص البورون \n(Boron (B\n",
+      -0.3238434330110745
+   ],
+   [
+      26,
+      "نقص النيتروجين \nNitrogen Deficiency in cabbage\n",
+      -0.7255754626122217
+   ],
+   [
+      23,
+      "نقص المولبيديوم\n(Molybdenum (Mo",
+      -0.7904010586142998
+   ],
+   [
+      17,
+      "نقص البوتاسيوم \n(Potassium (K\n",
+      -0.852393875255647
+   ]
+]

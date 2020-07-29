@@ -52,12 +52,13 @@ class Input_Symptoms_CF_Engine(KnowledgeEngine):
 def Accumulate_UserInput_Symptoms_CF(resultSymptomsCF: dict, symptom: dict) -> dict:
     # print('\nX\n', resultSymptomsCF, '\nW\n', symptom)
     symptom_Name = symptom['name']
+    symptom_NameAr = symptom['nameAr']
     symptom_Question = symptom['question']
 
     return {
         **resultSymptomsCF,
         # //TODO add custom questions
-        symptom_Name: Ask_About_Symptom(symptom_Question)if
+        symptom_Name: Ask_About_Symptom(symptom_Question,symptom_Name,symptom_NameAr)if
         not symptom_Name in resultSymptomsCF else
         resultSymptomsCF[symptom_Name],
     }

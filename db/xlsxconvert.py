@@ -81,3 +81,4 @@ def buildDiseaseFromRange(sheet, range):
     result_disease['symptoms'] = symptoms
     # print(result_disease)
     return result_disease
+

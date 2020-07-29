@@ -9,6 +9,7 @@ from engines import *
 from gui import *
 
 try:
+    # ReadAndConvert()
     import db.disease_data
 except:
     ReadAndConvert()
@@ -26,13 +27,11 @@ class Plants_Disease_Diagnose_Engine(
 
 if showStartWindow():
 
-    watch('ACTIVATIONS')
+    # watch('ACTIVATIONS')
     engine = Plants_Disease_Diagnose_Engine()
 
     engine.reset()
     engine.run()
-
-    print(engine.facts)
 
 
 '''

@@ -14,8 +14,16 @@ class B_COLORS:
 
 
 CF_STRINGS = {
-    'Yes': 1.0,
-    'No': 0.0
+    'نعم بالتاكيد':
+    0.9,
+    'نعم ربما':
+    0.3,
+    'لست متأكدا':
+    0,
+    'لا':
+    -0.3,
+    'مطلقاً':
+    -0.8,
 }
 
 
@@ -32,6 +40,6 @@ class DiseaseStates:
 
 
 TITLE = 'Plant Diagnose - تشخيص أمراض المزروعات'
-WELCOME = 'أهلا بك في برنامج خبير تشخيص أمراض المزروعات' 
+WELCOME = 'أهلا بك في برنامج خبير تشخيص أمراض المزروعات'
 START = 'إبدا'
 BACKGROUND = 'assets/background.png'
