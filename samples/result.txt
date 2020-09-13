@@ -1,77 +1,145 @@
 {
    "state": "DIAGNOSED",
-   "plant": "ملفوف - Cabbage",
-   "name": "نقص المغنيسيوم \n(Magnesium (Mg\n",
-   "link": "https://www.al-hakem.com/نقص-المغنيسيوم-على-الملفوف-و-القرنبيط/",
-   "details": "يحدث نقص المغنيسيوم أساسًا في التربة الحمضية ، وفي التربة الخفيفة جدًا التي تخضع للغسيل أو في التربة ذات مستوى البوتاسيوم المرتفع جدًا.",
+   "plant": "تفاح - Apple",
+   "name": "تقرح الجذور",
+   "link": "https://www.al-hakem.com/تقرح-الجذور-في-التفاح/",
+   "details": "العامل المسبب : نيماتودا التقرح (Lesion Nematodes (Pratylenchus spp\nتعتبر نيماتودا التقرح Pratylenchus spp من اهم اجناس النيماتودا التي تتطفل وتتجول داخل الجذور Endo-Migratory Nematodes. وهي تنتشر في جميع أنحاء العالم تقريبا\nتعتبر بما تسببه من تقر حات شديدة للجذور مسؤولة عن تدهور المجموع الجذري، وبالتالي حساسية النباتات المصابة للجفاف، مما يؤدي إلى انخفاض كبير في النمو الخضري والإنتاج.",
    "symptoms": {
-      "The leaves are stained violet red": {
-         "question": "what about The leaves are stained violet red?",
-         "name": "The leaves are stained violet red",
-         "nameAr": "تلون الأوراق باللون الأحمر البنفسجي",
-         "CF": 0.15601163460921186
+      "weakness in plant growth": {
+         "question": "what about weakness in plant growth?",
+         "name": "weakness in plant growth",
+         "nameAr": "ضعف عام في النبات والنمو",
+         "CF": 0.8435242997493964
       },
-      "Chlorosis in the leaves": {
-         "question": "what about Chlorosis in the leaves?",
-         "name": "Chlorosis in the leaves",
-         "nameAr": "تبرقش على الأوراق",
-         "CF": 0.44555818384733037
+      "smaller leaves": {
+         "question": "what about smaller leaves?",
+         "name": "smaller leaves",
+         "nameAr": "صغر حجم الأوراق",
+         "CF": 0.6879206979587615
       },
-      "leaves fall": {
-         "question": "what about leaves fall?",
-         "name": "leaves fall",
-         "nameAr": "تساقط الاوراق",
-         "CF": 0.7077336690573596
+      "Paleness leaves": {
+         "question": "what about Paleness leaves?",
+         "name": "Paleness leaves",
+         "nameAr": "شحوب في لون الأوراق",
+         "CF": 0.8509469568685202
+      },
+      "die-back": {
+         "question": "what about die-back?",
+         "name": "die-back",
+         "nameAr": "موت الأفرع الطرفية Die-Back",
+         "CF": 0.9339564921635045
+      },
+      "root with rectangular botch spots": {
+         "question": "what about root with rectangular botch spots?",
+         "name": "root with rectangular botch spots",
+         "nameAr": "يوجد على الجذر بقع متقرحة مستطيلة نوعاً ما بنية اللون تزداد في الحجم مع اشتداد الإصابة وتتحول للون الأسود",
+         "CF": 0.84
+      },
+      "Root decomposition": {
+         "question": "what about Root decomposition?",
+         "name": "Root decomposition",
+         "nameAr": "تحلل الجذر",
+         "CF": 0.5
       }
    },
-   "CF": 0.6700437924984327,
-   "__factid__": 20
+   "CF": 0.9995404603198879,
+   "__factid__": 45
 }
 
 [
    [
-      20,
-      "نقص المغنيسيوم \n(Magnesium (Mg\n",
-      0.6700437924984327
+      45,
+      "تقرح الجذور",
+      0.9995404603198879
    ],
    [
-      14,
-      "نقص الكاسيوم (Calcium (Ca\n",
-      0.637579595367232
+      42,
+      "حفار ساق التفاح The Leopard Moth\n\n",
+      0.9975886167858359
    ],
    [
-      35,
-      "موزاييك الفجل \nRadish Mosaic\n",
-      0.2040904530891651
+      30,
+      "العفن التاجي Phytophthora crown and root rot \n",
+      0.997131847365043
    ],
    [
-      38,
-      "نيماتودا تعقد الجذور\nRoot Knot\n",
-      0.007401271425929532
+      33,
+      "مرض وجه القطة Cat-facing Insects\n",
+      0.9875621190768977
    ],
    [
-      29,
-      "نقص االفوسفور \n(Phosphorus (P\n",
-      -0.07018885014434235
+      36,
+      "نقص الحديد Iron Deficiency\n",
+      0.9707384045280402
    ],
    [
-      32,
-      "نقص البورون \n(Boron (B\n",
-      -0.3238434330110745
+      78,
+      "دودة ثمار التفاح أو الكمثرى Codling Moth\n",
+      0.9505147542822941
    ],
    [
-      26,
-      "نقص النيتروجين \nNitrogen Deficiency in cabbage\n",
-      -0.7255754626122217
+      39,
+      "لسعة الشمس  SUN SCALD\n",
+      0.9473918461623156
    ],
    [
-      23,
-      "نقص المولبيديوم\n(Molybdenum (Mo",
-      -0.7904010586142998
+      48,
+      "خنافس القلف BARK BEETLE\n",
+      0.9323627580098025
    ],
    [
-      17,
-      "نقص البوتاسيوم \n(Potassium (K\n",
-      -0.852393875255647
+      51,
+      "نقص المغنيزيوم Magnesium  Deficiency\n",
+      0.8972384824056238
+   ],
+   [
+      66,
+      "الأشنة في التفاحيات",
+      0.8065787542366568
+   ],
+   [
+      57,
+      "منّ التفاح الوردي والأخضر منّ التفاح الوردي والأخضر\n",
+      0.8015657322251986
+   ],
+   [
+      75,
+      "جفاف وموت الاطراف DIE- BACK \n",
+      0.791868507381995
+   ],
+   [
+      27,
+      "نقص الفوسفور Phosphorus deficiency\n",
+      0.7825224485966475
+   ],
+   [
+      72,
+      "نقص البورون Boron",
+      0.6302182081856736
+   ],
+   [
+      60,
+      "العفن الأرميلاري Armillaria Root Rot\n",
+      0.6277782981173515
+   ],
+   [
+      63,
+      "نقص النتروجين Nitrogen deficiency\n",
+      0.591438965732154
+   ],
+   [
+      54,
+      "من التفاح القطني Apple woolly aphid\n",
+      0.49066918250114144
+   ],
+   [
+      69,
+      "مرض التدرن التاجي  Crown gall \n",
+      0.21938114068507877
+   ],
+   [
+      24,
+      "مرض التقرح البكتيري Pear Canker\n\n",
+      0.018071006129559187
    ]
 ]
